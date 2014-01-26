@@ -8,4 +8,5 @@ after
     $ db:migrate
 
 run
+
     $ rake wklej
