@@ -4,7 +4,8 @@ mc
 Modelowanie Cyfrowe - learnig program
 
 after
-  db:migrate
+
+    $ db:migrate
 
 run
-  rake wklej
+    $ rake wklej
