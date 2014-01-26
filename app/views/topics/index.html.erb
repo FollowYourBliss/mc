@@ -1,0 +1,22 @@
+<h4>  <%= @topics.name %></h4>
+
+<table class="table table-hover">
+  <tbody>
+    <% @topics.questions.each do |question| %>
+      <tr>
+        <td style="width: 700px;"><%= question.name %></td>
+        <% if question.niewiadomo %>
+          <td style="width: 200px;" class="niewiadomo">brak odpowiedzi</td>
+        <% else %>
+          <td style="width: 200px;"><%= check_box("odpowiedz", "kupa", { class: 'check-me', oczek: question.value }) %><div class="odpowiedzi" style="display:none;"><%= question.value %></div></td>
+        <% end %>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+    <button class="btn btn-success" id="sprawdz" >Pokaż odpowiedzi</button>
+    <button class="btn btn-success" id="nast">Następne pytania</button>
+
+<br>
+

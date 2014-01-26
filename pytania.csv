@@ -1,0 +1,453 @@
+"Dany jest generator liczb losowych Xi o rozkładzie równomiernym w przedziale (-0.5, 0.5) oraz wyznaczane są liczby losowe Yi według wzorów podanych niżej. Wskaż, które z podanych wzorów mogą być stosowane do generacji liczb losowych o rozkładzie normalnym N(0,1):",
+0,? 24 i=1 Xi
+0,? 6 i=1 Xi
+1,? 12 i=1 Xi
+1,? 48 i=1 Xi
+,
+Oceń poprawność następujących stwierdzeń dotyczących wybranych metod znajdowania równań stanu układu dynamicznego:,
+0,metoda mieszana polega na złożeniu metody zmiennej pomocniczej i metody kolejnych całkowań
+0,zmienne stanu uzyskiwane przy zastosowaniu metody kolejnych całkowań są sygnałem wyjściowym lub pochodnymi sygnału wyjściowego
+1,metodę zmiennej pomocniczej można zastosować w przypadku występowania pochodnych zmiennych wejściowych
+0,"metoda ogólna znajduje zastosowanie w przypadku, gdy występuje pochodna zmiennej wejściowej"
+,
+Metodę funkcji kary stosujemy gdy:,
+X,wskaźnik jakości ma wartość -inf
+X,"jeden z parametrów optymalizacji przyjmuje wartości z przedziału (+inf, -inf)"
+X,"szukamy takich optymalnych wartości parametru, by wskaźnik jakości miał wartość maksymalną"
+1,na parametry optymalizacji są nałożone ograniczenia
+,
+Oceń poprawność następujących stwierdzeń dotyczących schematów różnicowych:,
+X,"w schematach jednokrokowych kolejne przybliżenie rozwiązania tk+1, vk+1 zależy od wartości i pochodnej f w otoczeniu tk, vk"
+0,"równanie Vk+1 = Vk + ( f(Vk,tk) + f(vk+hf(Vk,tk),fk+h) )/2 opisuje schemat Rungego-Kutty rzędu 1"
+1,funkcja f występująca we wzorach schematów różnicowych jest prawą stroną równania stanu.
+1,schematy różnicowe są układami dyskretnymi
+,
+Klasa Timer w pakiecie CSL++:,
+0,"zawiera metodę setOff() pozwalającą na zatrzymanie upływu czasu w danym zegarze, podczas gdy w innych zegarach czas będzie płynął zgodnie z kolejnymi wywołaniami metody TimeFlow()"
+1,może być wykorzystana jako miernik czasu bez konieczności powiązania z konkretnym zadaniem
+1,wraz z zaprzyjaźnioną funkcją TimeFlow() umożliwia modelowanie upływu czasu
+0,zawiera metodę Now() umożliwiającą wyzerowanie zegara
+,
+Operatorowa funkcja przejścia to:,
+0,iloraz transformaty (Laplace'a-Carlsona lub Laplace'a)
+1,iloraz wyjścia do wejścia
+,
+Oceń poprawność stwierdzeń:,
+1,z równania różnicowego wynika postać transmitancji układu dyskretnego
+X,operatorowa funkcja przejścia ((e^p)/(e^p - 1)) * ((3e^p + 1)/(e^ep + 2e^p + 3)) układu dyskretnego odpowiada równaniu różnicowemu yx+1 + 2*yx+1 + 3yx = 3ux+1 + ux
+X,"jeśli sygnał schodkowy występuje w układzie jako wymuszenie, to operatorowa funkcja przejścia wynosi Ksch(p) = (e^p)/(e^p - 1) Lc[sch k1(kTi)], gdzie jest odpowiedzią obiektu na impuls jednostkowy"
+,
+Oceń poprawność następujących stwierdzeń dla dowolnego modelu układu zdarzeń dyskretnych zbudowanego według koncepcji planowania zdarzeń:,
+1,mechanizmem upływu czasu symulacyjnego steruje procedura kontroli symulacji.
+0,"planowanie dotyczy zarówno tego, co będzie odbywać się w przyszłości, jak i przeszłości."
+1,zaplanowanie zdarzenia wymaga między innymi obliczenia chwili zajścia tego zdarzenia.
+0,"wykrycie przez procedurę kontroli symulacji pustego zbioru zaplanowanych zdarzeń w trakcie realizacji eksperymentu oznacza, że aktualny stan układu jest ostateczny."
+,
+Oceń stabilności układów liniowych ciągłych,
+0,jeśli równanie charakterystyczne układu posiada pierwiastki jednokrotne zarówno zerowe jak i mniejsze od zera to układ jest stabilny asymptotycznie w punktach równowagi
+0,kryterium Hurwitza pozwala na wyznaczenie wartości pierwiastków równania charakterystycznego w celu określenia na ich podstawie stabilności układu
+1,kryterium Hurwitza można stosować jedynie dla układów dynamicznych rzędu większego niż 2
+0,"jeśli równanie charakterystyczne układu posiada pierwiastki wielokrotne zerowe, to układ jest stabilny w punkcie równowagi"
+,
+"W prezentowanym na wykładzie modelu elementu inercyjnego pierwszego rzędu, zastosowano procedurę CALKA wyznaczającą nowe wartości. Które ze sformułowań są prawdziwe:",
+0,"procedura CALKA wyznacza nowe, przybliżone wartości zmiennej wyjściowej yi"
+0,"procedura CALKA wyznacza nowe, przybliżone wartości zmiennych stanu xi i zmiennej wyjścia yi"
+1,"procedura CALKA wyznacza nowe, przybliżone wartości zmiennych stanu xi, ich pochodnych xi' oraz nową wartość zmiennej niezależnej ti"
+0,"procedura CALKA wyznacza nowe, przybliżone wartości zmiennej wyjściowej yi oraz nową wartość zmiennej niezależnej ti"
+,
+Oceń poprawność następujących stwierdzeń dotyczących hierarchii modułów i zasad opisu topologii modelu w pakiecie OMNet++:,
+1,"brama wejściowa może zostać podłączona do wielu bram wyjściowych, z których każda należy do innego modułu prostego"
+0,brama wyjściowa może zostać podłączona tylko do 1 bramy wejściowej innego modułu prostego
+0,"pojedynczy moduł prosty może posiadać wiele bram wejściowych, ale tylko jedną bramę wyjściową"
+0,sekcja Submodules w definicji modułu złożonego służy do zdefiniowania połączeń między poszczególnymi modułami podrzędnymi tego modułu złożonego
+,
+Oceń poprawność następujących stwierdzeń dotyczących transformaty Laplace'a-Carsona z funkcji schodkowych:,
+1,Lc[sch c^x] = (e^p - c)/(e^p - 1)
+1,Lc[sch f1(x) + sch f2(x)] = Lc[sch f1(x)] + Lc[sch f2(x)]
+0,Lc[sch f1(x) * sch f2(x)] = Lc[sch f1(x)] * Lc[sch f2(x)]
+0,Lc[sch x] = 1/(e^p - 1)
+,
+"Wektory d^1, d^2,... ,d^m, są wzajemnie sprzężone względem macierzy W dodatnio określonej, jeśli:",
+1,"< d^i, Wd^j > 0 dla i != j"
+0,"< d^i, Wd^j >= 0 dla i != j"
+1,"< d^i, Wd^j >= 0 dla i = j"
+0,"< d^i, WVq(an) > 0 gdzie Vq(an) jest gradientem wskaźnika w punkcie"
+,
+W środowisku Matlab/Simulink funkcja sim umożliwia:,
+X,rozwiązanie zagadnienia optymalizacji parametrycznej
+1,rozwiązanie zagadnienia początkowego dla układów dyskretnych
+X,wyznaczenie czasowej funkcji przejścia
+1,rozwiązanie zagadnienia początkowego dla układów ciągłych
+,
+Oceń poprawność stwierdzeń dotyczących metod generacji liczb losowych o rozkładzie równomiernym:,
+0,"wzór xn+1 = [xn^2 * 2^(-m/2)] - [xn^2 * 2^(-3m/2)] * 2^m opisuje pseudolosowy multiplikatywno-addytywny generator liczb o rozkładzie równomiernym, gdzie m jest liczbą bitów reprezentujących xi"
+0,"generator multiplikatywny xn+1 = cxn(mod M) generuje ciąg liczb o najdłuższym okresie, gdy współczynnik c jest wielokrotnością M"
+1,"liczby o rozkładzie równomiernym na odcinku [0, 1) mogą być uzyskiwane poprzez zastosowanie metody odwracania dystrybuanty"
+1,prawdopodobieństwo wylosowania konkretnej liczby zgodnie z idealnym rozkładem równomiernym ciągłym wynosi 0
+,
+Określ poprawność następujących stwierdzeń dotyczących szeregowej i równoległej metody znajdowania równań stanu:,
+0,metoda mieszana jest kombinacją metody szeregowej i metody równoległej
+0,uzyskana postać równań stanu powinna być identyczna niezależnie od zastosowanej metody
+1,w metodzie szeregowej sygnał wymuszenia jest zadawany na wejście każdego z połączonych ze sobą szeregowo układów elementarnych
+0,przy zastosowaniu metody równoległej dla funkcji przejścia K(p) = (p+1)/(p^2 - 4) wartość współczynników D wynosi -1/4
+,
+Wskaż funkcję dodatnio określoną:,
+X,"V(x1, x2) = 2*x1^2 + 6*x1x2 + 5*x2^2"
+X,"V(x1, x2) = 2*x1^2 + 5*x1x2 + 5*x2^2"
+X,"V(x1, x2) = 2*x1^2 - 6*x1x2 + 5*x2^2"
+1,"V(x1, x2) = x1^2 + x2^2"
+,
+Oceń poprawność następujących stwierdzeń dla modelu systemu M/M/1 zbudowanego w oparciu o koncepcję planowania zdarzeń (GASP):,
+0,"jeśli po zakończeniu obsługi jednego ze zdarzeń w chwili T należy do (_T0, _Tmax) plan zdarzeń jest pusty, to stan ten oznacza, że zbudowany model układu jest błędny"
+1,"dla zbudowania poprawnego modelu wystarczające jest posłużenie się jedynie zdarzeniem ""wygenerowanie kolejnego zgłoszenia"""
+0,"niezbędne jest, aby elementy zbioru reprezentującego kolejkę do stanowiska obsługi posiadały atrybut służący do zapamiętania chwili opuszczenia kolejki przez dane zgłoszenie"
+0,"dla wejścia zgłoszenia na stanowisko obsługi pusta kolejka przed stanowiskiem jest warunkiem koniecznym, ale niewystarczającym"
+,
+W modelu opartym na schemacie różnicowym Adamsa-Bashfortha 2 rzędu zamiast kroku całkowania o wartości h przyjęto krok całkowania o wartości h/2. Które ze zdań jest najbardziej prawdopodobne? W wyniku zmiany kroku całkowania lokalny błąd odcięcia będzie:,
+0,sześć razy mniejszy
+0,osiem razy mniejszy
+0,dwa razy mniejszy
+0,cztery razy mniejszy
+,
+Oceń poprawność następujących stwierdzeń związanych z implementacją algorytmu symulacyjnego w modelu utworzonym w pakiecie OMNET++,
+1,jedną z możliwych przyczyn zakończenia jest przekroczenie limitu czasu trwania eksperymentu podanego w jednostkach czasu rzeczywistego w pliku konfiguracyjnym
+0,usunięcie komunikatu sterującego wysłanego za pomocą scheduleAtz z listy przyszłych zdarzeń (FES) nie jest możliwe
+1,"zapis scheduleAt(simTime()+240, sendMessageEvent) oznacza, że komunikat sterujący sendMessageEvent dotrze po upływie 4 minut czasu symulacyjnego."
+0,nazwa jako atrybut komunikatu nie może ulec zmianie przez cały czas życia komunikatu
+,
+Oceń poprawność następujących stwierdzeń dotyczących zagadnień związanych z obliczeniem wartości początkowych zmiennych stanu i zmiennych wyjścia,
+1,przy zastosowaniu metody ogólnej wartości początkowe kolejnych zmiennych stanu są równe warunkom początkowym dla zmiennej wyjścia i jej kolejnych pochodnych
+1,w metodzie zmiennej pomocniczej warunki początkowe zmiennych stanu wyznacza się w oparciu o równanie wyjścia i równania pochodnych zmiennej wyjściowej uzyskane przez różniczkowanie równania wyjścia
+1,"gdy zmienna wejściowa nie zawiera impulsów Dirace’a, to granice lewo i prawostronna warunku początkowego zmiennej stanu są sobie równe"
+1,w metodzie kolejnych całkowań występuje jawna zależność zmiennej stanu od zmiennych: wejściowej i wyjściowej i ich pochodnych
+,
+Oceń poprawność następujących stwierdzeń dotyczących charakterystyki metod związanych z obsługą komunikatów w środowisku OMENT++,
+0,niemożliwe jest natychmiastowe wysłanie i odebranie komunikatu sterującego
+1,"metoda handleMessage wykrywa zarówno nadejście komunikatów sterujących, jak i nadesłanych przez inny moduł"
+1,metoda scheduleAt umieszcza komunikat sterujący w liście przyszłych zdarzeń (FES)
+0,metoda send służy do natychmiastowego wysyłania komunikatów sterujących
+,
+Oceń poprawność następujących stwierdzeń dotyczących warunków stabilności układów liniowych dyskretnych:,
+1,na płaszczyźnie zespolonej przekształcenie p = (n+1)/(n-1) odwzorowuje punkty półpłaszczyzny n w punkty koła p
+0,na płaszczyźnie zespolonej przekształcenie p = (n+1)/(n-1) odwzorowuje punkty półpłaszczyzny n w punkty półpłaszczyzny p
+0,"jeśli równanie charakterystyczne ma pierwiastki mniejsze lub równe jeden, to układ jest stabilny"
+0,"jeśli równanie charakterystyczne ma pierwiastki większe od 0, to układ jest niestabilny"
+,
+Oceń poprawność następujących stwierdzeń dotyczących metod znajdywania równań stanu:,
+0,w metodzie zmiennej pomocniczej jako zmienne stanu przyjmuje się zmienną wyjściową i jej pochodne
+1,metoda szeregowa polega na przedstawieniu układu jako szeregowego połączenia układów prostszych
+X,w metodzie równoległej funkcję przejścia przedstawia się jako K(p) = ? n i=0 = Ki(p)
+0,"metodę ogólną można stosować dla układów opisanych funkcją przejścia K(p) = L(p)/M(p) w przypadku, gdy licznik L(p) jest stopnia co najmniej pierwszego"
+,
+Oceń poprawność następujących stwierdzeń dotyczących generacji liczb pseudolosowych:,
+1,metoda superpozycji może być przydatna w realizacji generatora zadanego funkcją gęstości rozkładu o skomplikowanym kształcie
+0,metoda odwracania dystrybuanty znajduje zastosowanie dla generatora liczb o rozkładzie równomiernym
+1,wygenerowanie kolejnej liczby za pomocą metody odwracania dystrybuanty wymaga jednokrotnego użycia pomocniczego generatora liczb o rozkładzie równomiernym
+0,"metoda eliminacji znajduje zastosowanie w przypadku, gdy funkcja gęstości rozkładu nie jest ograniczona"
+,
+Oceń poprawność następujących stwierdzeń dotyczących rozwiązywania zadań optymalizacji param w środowisku Matlab/Simulink:,
+1,funkcja fminunc umożliwia rozwiązywanie zadań z optymalizacji parametrycznej bez ograniczeń
+0,musi być określona funkcja wyznaczania pochodnych wektora stanu
+0,funkcja fminsearch implementuje algorytm Gaussa-Seidlera wyznaczania minimum funkcji
+1,musi być określona funkcja wyznaczania wartości wskaźnika jakości dla aktualnych wartości wektora parametrów optymalizacji; funkcja ta dodatkowo może wyznaczać składowe gradientu
+,
+Koncepcja wyboru działania:,
+X,znajduje zastosowanie przy modelowaniu dowolnych układów dyskretnych
+1,"wymaga, aby w budowanym modelu programowym przy każdym przesunięciu czasu zbadać możliwość wystąpienia wszystkich zdarzeń czasowych i warunkowych"
+1,umożliwia modelowanie systemów masowej obsługi
+0,implementowana jest przez pakiet GASP
+,
+Oceń poprawność następujących stwierdzeń związanych z charakterystyką klas do wyznaczania statystyki histogramów w OMNET++Ł,
+0,do histogramów mogą trafiać wyłącznie wartości całkowite
+0,do rejestracji pojedynczej wartości służy metoda record
+1,wszystkie komórki wewnętrzne histogramu klasy cLongHistogram mają jednakową szerokość
+1,"komórka histogramu klasy cLongHistogram o granicach określonych jako (-0.5, 0.5) zlicza obserwację o wartości 0"
+,
+Oceń poprawność następujących stwierdzeń dla dowolnego modelu układu zdarzeń dyskretnych zbudowanego z użyciem pakietu GASP:,
+1,"planowanie zdarzeń może dotyczyć zarówno tego, co będzie odbywać się w przyszłości, jak i w teraźniejszości"
+0,"zbiór zaplanowanych zdarzeń nosi nazwę ""struktury FES"""
+1,zaplanowanie zdarzenia może wymagać między innymi użycia jednej z funkcji generującej liczby pseudolosowe
+1,"brak elementów w zbiorze zaplanowanych zdarzeń po zakończeniu obsługi jednego ze zdarzeń w trakcie realizacji eksperymentu oznacza, że aktualny stan układu jest ostateczny"
+,
+Oceń poprawność następujących stwierdzeń dla modelu M/M/1 zbudowanego z wykorzystaniem środowiska OMNET++,
+0,warunkiem zakończenia obsługi danego zgłoszenia jest obecność w kolejce co najmniej jednego zgłoszenia czekającego na obsługę
+1,"dla wejścia zgłoszenia na stanowisko obsługi pusta kolejka przed stanowiskiem jest warunkiem koniecznym, ale nie wystarczającym"
+0,dla zbudowanie poprawnego modelu wystarczające jest posłużenie się w obrębie całego modelu jednym typem komunikatu sterującego – sygnalizującym wystąpienie zdarzenia „wygenerowanie kolejnego zgłoszenia”
+1,w celu zebrania danych dla przygotowanie wykresu zmian aktualnej liczby zgłoszeń przebywających w systemie można zastosować klasę cOutVector
+,
+Oceń poprawność następujących stwierdzeń dotyczących metod optymalizacji parametrycznej,
+0,metoda Gaussa-Seidela jest gradientową metodą kierunków poprawy
+1,metoda Hooka-Jebesa jest bezgradientową metodą poszukiwań prostych
+0,metoda simpleksu Neldera-Meada jest gradientową metodą poszukiwań prostych
+1,metoda kierunków sprzężonych Powella jest bezgradientową metodą kierunków poprawy.
+,
+Oceń poprawność następujących stwierdzeń związanych z opisem układu w postaci równań stanu i równania wyjścia:,
+1,równania stanu można stosować do opisu układów liniowych i nieliniowych
+0,"jeżeli macierz przejścia D jest zerowa, to nieciągłości sygnału wejściowego są przenoszone do sygnału wyjściowego"
+X,w równaniu stanu nie występuje zależność od pochodnych sygnału wejściowego
+,
+Oceń poprawność następujących stwierdzeń dotyczących schematów różnicowych:,
+0,"w ramach metody predykator-korektor najpierw wykonywana jest metoda zamknięta, potem otwarta"
+1,metody zamknięte wymają rozwiązania równania algebraicznego w każdym kroku
+0,w metodzie predykator-korektor celem etapu korekcji jest znalezienie początkowego przybliżenia punktu
+0,metody otwarte charakteryzują się większą dokładnością od metod zamkniętych
+,
+W środowisku Matlab,
+1,drugi parametr wejściowy funkcji ode45 to wektor określający przedział całkowania
+0,funkcja ode45 zwraca miedzy innymi przebiegi zmiennych określonych równaniem wyjścia
+0,pierwszy parametr wejściowy funkcji ode45 to nazwa funkcji wyznaczania zmiennych wyjściowych
+1,ode45 umożliwia rozwiązanie zagadnienia początkowego
+,
+W środowisku Matlab/Simulink funkcja sim umożliwia:,
+1,rozwiązanie zagadnienia początkowego dla układów dyskretnych
+X,rozwiązanie zagadnienia optymalizacji parametrycznej
+1,rozwiązanie zagadnienia początkowego dla układów ciągłych
+X,wyznaczenie czasowej funkcji przejścia
+,
+Oceń poprawność następujących stwierdzeń dotyczących zadania optymalizacji parametrycznej:,
+1,zadanie dwugranicznej jest przykładem zadania optymalizacji parametrycznej
+0,parametrami optymalizacji nie mogą być warunki początkowe zmiennych stanu
+1,"w zadaniach optymalizacji parametrycznej szukamy takich optymalnych wartości parametrów alfa, by wskaźnik jakości przyjął wartość minimalną"
+1,szukanie maksymalnej wartości wskaźnika jakości można zastąpić szukaniem minimalnej wartości wskaźnika pomnożonego przez -1
+,
+W pakiecie SimEvents do budowy modelu wykorzystywane są:,
+0,koncepcja wyboru działania
+0,koncepcja planowania zdarzeń
+0,ciągłe równania stanu
+0,dyskretne równania stanu
+1,koncepcja interakcji procesów
+,
+Oceń poprawność następujących stwierdzeń dla dowolnego modelu układu zdarzeń dyskretnych zbudowanego według koncepcji planowania zdarzeń:,
+0,można planować zdarzenia odbywające się w przeszłości
+1,zaplanowanie zdarzenia wymaga między innymi obliczenia chwili zajścia tego zdarzenia
+1,mechanizmem upływu czasu symulacyjnego steruje procedura kontroli symulacji
+1,"obecność elementów w zbiorze zaplanowanych zdarzeń po zakończeniu realizacji eksperymentu oznacza, że eksperyment zakończył się w sposób nieprawidłowy (błędny)"
+,
+Oceń poprawność poniższych stwierdzeń związanych z opisem postaci równań stanu:,
+0,dla danego układu istnieje tylko jeden opis za pomocą równań stanu
+1,"równania stanu można stosować zarówno do opisu układów liniowych, jak i nieliniowych"
+1,w równaniu stanu nie występuje zależność od pochodnych sygnału wejściowego
+1,równania stanu są równaniami różniczkowymi
+,
+Oceń poprawność następujących stwierdzeń dotyczących zagadnień związanych z obliczaniem wartości początkowych zmiennych stanu i zmiennych wyjścia:,
+0,przy zastosowaniu metody szeregowej wartości początkowe kolejnych zmiennych stanu są równe warunkom początkowym dla zmiennej wyjścia i jej kolejnych pochodnych
+1,przy zastosowaniu metody ogólnej wartości początkowe kolejnych zmiennych stanu są równe warunkom początkowym dla zmiennej wyjścia i jej kolejnych pochodnych
+0,"skokowa zmiana sygnału wejściowego w chwili t=0 powoduje, że pomiędzy wartościami zmiennych stanu zachodzi następująca relacja: x(0+) != x(0-)"
+0,przy zastosowaniu metody równoległej wartości początkowe kolejnych zmiennych stanu są równe warunkom początkowym dla zmiennej wyjścia i jej kolejnych pochodnych
+,
+Oceń poprawność następujących stwierdzeń dotyczących schematów różnicowych:,
+X,"schemat różnicowy postaci vj+1 = F(vj+1, vj,..., vj-p, tj) jest schematem jawnym"
+1,"schemat różnicowy jednokrokowy ma postać vj+1 = F(vj, tj)"
+1,metody Rungego-Kutty są przykładami metod jednokrokowych
+X,"schemat różnicowy o postaci vj+1 = F(vj, vj-1,..., vj-p, tj) jest schematem jawnym"
+,
+Oceń poprawność następujących stwierdzeń dotyczących metody elimicjacji:,
+1,nie może być wykorzystywana do generacji liczb o dowolnym nieobciętym rozkładzie normalnym
+0,jest zawsze bardziej efektywna od metody odwracania dystrybuanty
+0,umożliwia wygenerowanie kolejnej liczby zawsze przy jednokrotnym użyciu pomocniczego generatora liczb o rozkładzie równomiernym
+0,"znajduje zastosowanie w przypadku, gdy funkcja gęstości rozkładu nie jest ograniczona"
+,
+Które z poniższych formuł opisują funkcję dodatnio określoną?,
+1,"V(x1,x2) = 2*x1^2 + 2*x1x2 + 5*x2^2"
+1,"V(x1,x2) = x1^2 + x2^2"
+0,"V(x1,x2) = 2*x1^2 - 7*x1x2 + 5*x2^2"
+1,"V(x1,x2) = 2*x1^2 - 2*x1x2 + 5*x2^2"
+,
+Oceń poprawność następujących stwierdzeń dla modelu systemu M/M/1 zbudowanego z wykorzystaniem środowiska OMNet++:,
+0,warunkiem zakończenia obsługi danego zgłoszenia jest nadejście komunikatu informującego o przybyciu kolejnego zgłoszenia
+0,dla wejścia zgłoszenia na stanowisko obsługi pusta kolejna przed stanowiskiem jest warunkiem koniecznym i wystarczającym
+1,"dla zbudowania poprawnego modelu wystarczające jest posłużenie się w obrębie całego modelu dwoma typami komunikatów sterujących, sygnalizującymi wystąpienie zdarzeń ""wygenerowanie kolejnego zgłoszenia"" i ""zakończenie obsługi"""
+0,w celu zebrania danych dla przygotowania wykresu zmian aktualnej liczby zgłoszeń przebywających w systemie należy zastosować klasę cQueue
+,
+Oceń poprawność poniższych stwierdzeń związanych z opisem w postaci równań stanu:,
+1,w równaniu stanu nie występuje zależność od pochodnych sygnału wejściowego
+0,dla danego układu istnieje tylko jeden opis za pomocą równań stanu
+1,"równania stanu można stosować zarówno do opisu układów liniowych, jak i nieliniowych"
+1,równania stanu są równaniami różniczkowymi
+,
+Oceń poprawność następujących stwierdzeń dotyczących wybranych metod znajdowania równań stanu układu dynamicznego:,
+1,metodę zmiennej pomocniczej można zastosować w przypadku występowania pochodnych zmiennych wejściowych
+0,metoda mieszana polega na złożeniu metody zmiennej pomocniczej i metody kolejnych całkowań
+0,"metoda ogólna znajduje zastosowanie w przypadku, gdy występuje pochodna zmiennej wejściowej."
+0,zmienne stanu uzyskiwane przy zastosowaniu metody kolejnych całkowań są sygnałem wyjściowym lub pochodnymi sygnału wyjściowego.
+,
+Oceń poprawność następujących stwierdzeń charakterystyki metod związanych z obsługą komunikatów w środowisku OMNeT++,
+0,metoda send umieszcza komunikat sterujący w liście przyszłych zdarzeń (FES).
+1,"w dowolnej chwili czasu symulacyjnego wywołanie o postaci scheduleAt(simTime(), msg) powoduje natychmiastowe nadejście komunikatu sterującego."
+1,"metoda handleMessage wykrywa zarówno nadejście komunikatów sterujących, jak i nadesłanych przez inny moduł."
+0,metoda scheduleAt służy do natychmiastowego (tj. dla bieżącej wartości czasu symulacyjnego) wysyłania komunikatów do innych modułów.
+,
+"Układ dyskretny opisany jest równaniem stanu xn+1 = |0 1; 1 0| xn + |0; 1|en. Zakładając warunek początkowy x0 = |0; 1| oraz e0 = 0 i en = 1 dla n>0, podać poprawną wartość x5:",
+0,x5 = |2; 3|
+1,x5 = |3; 2|
+0,x5 = |1; 3|
+0,x5 = |2; 1|
+,
+W środowisku Matlab/Simulink funkcja sim umożliwia:,
+1,rozwiązanie zagadnienia początkowego dla układów ciągłych
+1,rozwiązanie zagadnienia początkowego dla układów dyskretnych
+0,rozwiązanie zagadnienia optymalizacji parametrycznej
+0,wyznaczenie czasowej funkcji przejścia
+,
+Koncepcja wyboru działania:,
+1,"wymaga, aby w budowanym modelu cyfrowym przy każdym przesunięciu czasu zbadać możliwość wystąpienia wszystkich zdarzeń czasowych i warunkowych."
+1,umożliwia modelowanie systemów masowej obsługi.
+0,implementowana jest w programie Simmnon.
+1,znajduje zastosowanie przy modelowaniu dowolnych układów ciągłych.
+,
+Które z poniższych formuł opisują funkcję dodatnio określoną?,
+1,"V(x1,x2) = 2*x1^2 - 4*x1x2 + 5*x2^2"
+0,"V(x1,x2) = 2*x1^2 - 3*x1x2 + x2^2"
+0,"V(x1,x2) = 2*x1^2 - 7*x1x2 + 5*x2^2"
+1,"V(x1,x2) = 3*x1^2 + 2*x2^2"
+,
+W pakiecie SimEvents do budowy modelu wykorzystywane są:,
+0,koncepcja planowania zdarzeń
+0,koncepcja wyboru działania
+0,dyskretne równania stanu
+0,ciągłe równania stanu
+,
+Oceń poprawność następujących stwierdzeń dla dowolnego modelu układu zdarzeń dyskretnych zbudowanego według koncepcji planowania zdarzeń:,
+0,"wykrycie przez procedurę kontroli symulacji pustego zbioru zaplanowanych zdarzeń w trakcie realizacji eksperymentu oznacza, że aktualny stan układu jest ostateczny."
+0,"planowanie dotyczy zarówno tego, co będzie odbywać się w przyszłości, jak i przeszłości."
+1,mechanizmem upływu czasu symulacyjnego steruje procedura kontroli symulacji.
+1,zaplanowanie zdarzenia wymaga między innymi obliczenia chwili zajścia tego zdarzenia.
+,
+Oceń poprawność następujących stwierdzeń dotyczących schematów różnicowych:,
+X,"w schematach jednokrokowych kolejne przybliżenie rozwiązania tk+1, vk+1 zależy od wartości vk i pochodnej f w otoczeniu tk, vk."
+X,funkcja f występująca we wzorach schematów różnicowych jest prawą stroną równania stanu.
+X,"schemat różnicowy o postaci vj+1 = F(vj+1, vj,..., vj-p, tj) jest schematem jawnym."
+1,metody Rungego-Kutty są przykładami metod jednokrokowych
+,
+OMNET++ ,
+1,jedną z możliwych przyczyn zakończenia jest  przekroczenie limitu czasu trwania eksperymentu podanego w jednostkach czasu rzeczywistego w pliku konfiguracyjnym 
+1," metoda handleMessage wykrywa zarówno nadejście  komunikatów sterujących, jak i nadesłanych przez inny moduł"
+1, metoda scheduleAt umieszcza komunikat sterujący w liście przyszłych zdarzeń (FES) 
+1,"zapis scheduleAt(simTime()+240, sendMessageEvent) oznacza, że komunikat sterujący sendMessageEvent dotrze po upływie 4 minut czasu symulacyjnego. "
+1,"dla wejścia zgłoszenia na stanowisko obsługi pusta kolejka przed stanowiskiem jest warunkiem koniecznym, ale nie wystarczającym "
+1,w celu zebrania danych dla przygotowanie wykresu zmian aktualnej liczby zgłoszeń przebywających w systemie można zastosować klasę cOutVector
+1,wszystkie komórki wewnętrzne histogramu klasy cLongHistogram mają jednakową szerokość 
+1," komórka histogramu klasy cLongHistogram o granicach określonych jako (-0.5, 0.5) zlicza obserwację o wartości 0 "
+1,"dla zbudowania poprawnego modelu wystarczające jest posłużenie się w obrębie całego modelu dwoma typami komunikatów sterujących, sygnalizującymi wystąpienie zdarzeń ""wygenerowanie kolejnego zgłoszenia"" i ""zakończenie obsługi"" "
+1," w dowolnej chwili czasu symulacyjnego wywołanie o postaci scheduleAt(simTime(), msg) powoduje natychmiastowe nadejście komunikatu sterującego."
+1," metoda handleMessage wykrywa zarówno nadejście komunikatów sterujących, jak i nadesłanych przez inny moduł."
+0,usunięcie komunikatu sterującego wysłanego za pomocą scheduleAtz z listy przyszłych zdarzeń (FES) nie jest możliwe 
+0,nazwa jako atrybut komunikatu nie może ulec zmianie przez cały czas życia komunikatu
+0,niemożliwe jest natychmiastowe wysłanie i odebranie komunikatu sterującego 
+0,metoda send służy do natychmiastowego wysyłania komunikatów sterujących 
+0,do histogramów mogą trafiać wyłącznie wartości całkowite 
+0,warunkiem zakończenia obsługi danego zgłoszenia jest obecność w kolejce co najmniej jednego zgłoszenia czekającego na obsługę 
+0,dla zbudowanie poprawnego modelu wystarczające jest posłużenie się w obrębie całego modelu jednym typem komunikatu sterującego – sygnalizującym wystąpienie zdarzenia „wygenerowanie kolejnego zgłoszenia”
+0, do rejestracji pojedynczej wartości służy metoda record 
+0,warunkiem zakończenia obsługi danego zgłoszenia jest nadejście komunikatu informującego o przybyciu kolejnego zgłoszenia 
+0,dla wejścia zgłoszenia na stanowisko obsługi pusta kolejna przed stanowiskiem jest warunkiem koniecznym i wystarczającym 
+0,w celu zebrania danych dla przygotowania wykresu zmian aktualnej liczby zgłoszeń przebywających w systemie należy zastosować klasę cQueue
+0,metoda send umieszcza komunikat sterujący w liście przyszłych zdarzeń (FES).
+0,metoda scheduleAt służy do natychmiastowego (tj. dla bieżącej wartości czasu symulacyjnego) wysyłania komunikatów do innych modułów.
+,
+Zmienne Stanu i Wyjścia ,
+1,przy zastosowaniu metody ogólnej wartości początkowe kolejnych zmiennych stanu są równe warunkom początkowym  dla zmiennej wyjścia i jej kolejnych pochodnych 
+1, w metodzie zmiennej pomocniczej warunki początkowe zmiennych stanu wyznacza się w oparciu o równanie wyjścia i równania pochodnych zmiennej wyjściowej uzyskane przez różniczkowanie równania wyjścia 
+1,"gdy zmienna wejściowa nie zawiera impulsów Dirace’a, to granice lewo i prawostronna warunku początkowego zmiennej stanu są sobie równe "
+1,w metodzie kolejnych całkowań występuje jawna zależność zmiennej stanu od zmiennych: wejściowej i wyjściowej i ich pochodnych 
+0,przy zastosowaniu metody szeregowej wartościpoczątkowe kolejnych zmiennych stanu są równe warunkom początkowym dla zmiennej wyjścia i jej kolejnych pochodnych 
+0,skokowa zmiana sygnału wejściowego w chwili    t = 0 powoduje ze pomiedzy wartosiami zmiennych stanu zachodzi następująca relaxja x(0+) != x(0-)
+0,przy zastosowaniu metody równoległej wartości początkowe kolejnych zmiennych stanu są rowne warunkom początkowym dla zmiennej wyjścia i jej kolejnych pochodnych 
+,
+Warunki stabilności dyskretnych układów liniowych,
+1, na płaszczyźnie zespolonej przeształcenie p = (n+1)(n-1) odwzorowuje punkty półpraszczyzny n w punkty koła p
+0, na płaszczyźnie zespolonej przeształcenie p = (n+1)(n-1) odwzorowuje punkty półpraszczyzny n w punkty półpłaszczyzny p
+0," jeśli równanie charakterystyczne ma pierwiastki mniejsze lub równe jeden, to układ jest stabilny "
+0,"jeśli równanie charakterystyczne ma pierwiastki większe od 0, to układ jest niestabilny "
+,
+Równania Stanu ,
+1,metoda szeregowa polega na przedstawieniu układu jako szeregowego połączenia układów prostszych 
+0, w metodzie zmiennej pomocniczej jako zmienne stanu przyjmuje się zmienną wyjściową i jej pochodne 
+0,metodę ogólną można stosować dla układów opisanych funkcją przejścia k(p) = l(p)/m(p) w przypadku gdy licznik L(p) jest sopnia co najmniej pierwszego
+,
+Generatory ,
+1,metoda superpozycji może być przydatna w realizacji generatora zadanego funkcją gęstości rozkładu o skomplikowanym kształcie 
+1,wygenerowanie kolejnej liczby za pomocą metody odwracania dystrybuanty wymaga jednokrotnego użycia pomocniczego generatora liczb o rozkładzie równomiernym 
+0, metoda odwracania dystrybuanty znajduje zastosowanie dla generatora liczb o rozkładzie równomiernym 
+0,"metoda eliminacji znajduje zastosowanie w przypadku, gdy funkcja gęstości rozkładu nie jest ograniczona "
+,
+Optymalizacja ,
+1,funkcja fminunc umożliwia rozwiązywanie  zadań z optymalizacji parametrycznej bez ograniczeń 
+1,musi być określona funkcja wyznaczania wartości wskaźnika jakości dla aktualnych wartości wektora parametrów optymalizacji; funkcja ta dodatkowo może wyznaczać składowe gradientu 
+1,metoda Hooka-Jebesa jest bezgradientową metodą poszukiwań prostych 
+1,metoda kierunków sprzężonych Powella jest bezgradientową metodą kierunków poprawy. 
+1,zadanie dwugranicznej jest przykładem zadania optymalizacji parametrycznej 
+1,"w zadaniach optymalizacji parametrycznej szukamy takich optymalnych wartości parametrów alfa, by wskaźnik jakości przyjął wartość minimalną "
+1,szukanie maksymalnej wartości wskaźnika jakości można zastąpić szukaniem minimalnej wartości wskaźnika pomnożonego przez -1 
+0,musi być określona funkcja wyznaczania pochodnych wektora stanu  
+0,funkcja fminsearch implementuje algorytm Gaussa-Seidlera wyznaczania minimum funkcji 
+0, metoda Gaussa-Seidela jest gradientową metodą ierunków poprawy 
+0,metoda simpleksu Neldera-Meada jest gradientową metodą poszukiwań prostych 
+0, parametrami optymalizacji nie mogą być warunki początkowe zmiennych stanu 
+,
+Koncepcja wyboru działań ,
+x,znajduje zastosowanie przy modelowaniu dowolnych układów dyskretnych 
+1,"wymaga, aby w budowanym modelu programowym/czasowym przy każdym przesunięciu czasu zbadać możliwość wystąpienia wszystkich zdarzeń czasowych i warunkowych "
+1,znajduje zastosowanie przy modelowaniu dowolnych układów ciągłych. 
+1,umożliwia modelowanie systemów masowej obsługi 
+0,implementowana jest przez pakiet GASP 
+0,implementowana jest w programie Simmnon. 
+,
+GASP ,
+1,"planowanie zdarzeń może dotyczyć zarówno tego, co będzie odbywać się w przyszłości, jak i w teraźniejszości "
+1,zaplanowanie zdarzenia  może wymagać między innymi użycia jednej z funkcji generującej liczby pseudolosowe 
+1,"brak elementów w zbiorze zaplanowanych zdarzeń po zakończeniu obsługi jednego ze zdarzeń w trakcie realizacji eksperymentu oznacza, że aktualny stan układu jest ostateczny "
+0,"zbiór zaplanowanych zdarzeń nosi nazwę ""struktury FES"" "
+,
+Równania stanu i wyjścia ,
+1,równania stanu można stosować do opisu układów liniowych i nieliniowych 
+1,równania stanu są równaniami różniczkowymi w równaniu stanu nie występuje zależność od pochodnych sygnału wejściowego 
+1,równania stanu są równaniami różniczkowymi 
+1,metodę zmiennej pomocniczej można zastosować w przypadku występowania pochodnych zmiennych wejściowych 
+0,"jeżeli macierz przejścia D jest zerowa, to nieciągłości sygnału wejściowego są przenoszone do sygnału wyjściowego "
+0,dla danego układu istnieje tylko jeden opis za pomocą równań stanu 
+0,metoda mieszana polega na złożeniu metody zmiennej pomocniczej i metody kolejnych całkowań  
+0,"metoda ogólna znajduje zastosowanie w przypadku, gdy występuje pochodna zmiennej wejściowej. "
+0,zmienne stanu uzyskiwane przy zastosowaniu metody kolejnych całkowań są sygnałem wyjściowym lub pochodnymi sygnału wyjściowego.  
+0, dla danego układu istnieje tylko jeden opis za pomocą równań stanu 
+,
+Schematy różnicowe ,
+1,metody zamknięte wymają rozwiązania równania algebraicznego w każdym kroku 
+1,"B. schemat różnicowy jednokrokowy ma postać     vj+1 = F(vj,tj) "
+1,metody Rungego-Kutty są przykładami metod jednokrokowych 
+1,C. metody Rungego-Kutty są przykładami metod jednokrokowych 
+0,"w ramach metody predykator-korektor najpierw wykonywana jest metoda zamknięta, potem otwarta "
+0,w metodzie predykator-korektor celem etapu korekcji jest znalezienie początkowego przybliżenia punktu Vj+1
+0, metody otwarte charakteryzują się większą dokładnością od metod zamkniętych
+,
+Matlab,
+1," drugi parametr wejściowy funkcji ode45 to wektor 
+określający przedział całkowania   [to, tmax]"
+1, ode45 umożliwia rozwiązanie zagadnienia początkowego 
+1,rozwiązanie zagadnienia początkowego dla układów ciągłych
+1,rozwiązanie zagadnienia początkowego dla układów dyskretnych 
+0,funkcja ode45 zwraca miedzy innymi przebiegi zmiennych określonych równaniem wyjścia 
+0, pierwszy parametr wejściowy funkcji ode45 to nazwa funkcji wyznaczania zmiennych wyjściowych 
+0,rozwiązanie zagadnienia optymalizacji parametrycznej 
+0, wyznaczenie czasowej funkcji przejścia 
+,
+SimEvent ,
+1, koncepcja interakcji procesów 
+0,koncepcja planowania zdarzeń 
+0,koncepcja wyboru działania 
+0,dyskretne równania stanu 
+0,ciągłe równania stanu 
+,
+Planowanie zdarzeń ,
+1,mechanizmem upływu czasu symulacyjnego steruje procedura kontroli symulacji
+1,zaplanowanie zdarzenia wymaga między innymi obliczenia chwili zajścia tego zdarzenia. 
+1,"obecność elementów w zbiorze zaplanowanych zdarzeń po zakończeniu realizacji eksperymentu oznacza, że eksperyment zakończył się w sposób nieprawidłowy (błędny) "
+0,"wykrycie przez procedurę kontroli symulacji pustego zbioru zaplanowanych zdarzeń w trakcie realizacji eksperymentu oznacza, że aktualny stan układu jest ostateczny. "
+0,można planować zdarzenia odbywające się w przeszłości 
+0,"planowanie dotyczy zarówno tego, co będzie odbywać się w przyszłości, jak i przeszłości. "
+,
+Metoda Eliminacji ,
+1,nie może być wykorzystywana do generacji liczb o dowolnym nieobciętym rozkładzie normalnym 
+0,jest zawsze bardziej efektywna od metody odwracania dystrybuanty
+0,umożliwia wygenerowanie kolejnej liczby zawsze przy jednokrotnym użyciu pomocniczego generatora liczb o rozkładzie równomiernym 
+0,"znajduje zastosowanie w przypadku, gdy funkcja gęstości rozkładu nie jest ograniczona "

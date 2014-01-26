@@ -1,0 +1,25 @@
+<h4>  <%= @topic.name %></h4>
+
+<table class="table table-hover">
+  <tbody>
+    <% @topic.questions.each do |question| %>
+      <tr>
+        <td style="width: 700px;"><%= question.name %></td>
+        <% if question.niewiadomo %>
+          <td style="width: 200px;" class="niewiadomo">brak odpowiedzi</td>
+        <% else %>
+          <td style="width: 200px;"><%= check_box("odpowiedz", "kupa", { class: 'check-me', oczek: question.value }) %><div class="odpowiedzi" style="display:none;"><%= question.value %></div></td>
+        <% end %>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+    <button class="btn btn-success" id="sprawdz" >Pokaż odpowiedzi</button>
+    <%= link_to 'Pierwsze', @topic.first, {:class => "btn btn-default"} %>
+    <%= link_to raw("<span class='glyphicon glyphicon-chevron-left'></span>"), @topic.previous, {:class => "btn btn-default"} %>
+    <%= link_to raw("<span class='glyphicon glyphicon-chevron-right'></span>"), @topic.next, {:class => "btn btn-default"} %>
+    <%= link_to 'Ostatnie', @topic.last, {:class => "btn btn-default"} %>
+
+
+<br>
