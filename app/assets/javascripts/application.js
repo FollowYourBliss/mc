@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-console.log("gowno");
+console.log("application.js init");
 $(document).on('click', '#sprawdz', function() {
  $(".check-me").each(function(i, obj) {
  	$(this).parent().removeClass("dobrze");
